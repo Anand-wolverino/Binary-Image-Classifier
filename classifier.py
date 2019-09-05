@@ -36,16 +36,14 @@ zoom_range = 0.2,
 horizontal_flip = True)
 
 # Using flow from directory to point to the directory containing images. Give your path to image direcroy here
-training_set = train_datagen.flow_from_directory('D:\\lbp\\neural',target_size = (128,128),batch_size = 10,class_mode = 'binary')
+training_set = train_datagen.flow_from_directory('',target_size = (128,128),batch_size = 10,class_mode = 'binary')
 
 # Fit the model on the training images
-classifier.fit_generator(training_set,steps_per_epoch = 70,epochs = 5)
+classifier.fit_generator(training_set,steps_per_epoch = 70,epochs = 10)
 
-classifier.save('weights.h5')
 # Finally ! Testing the classifier. Give your path to the test image here!
-test_image = image.load_img('D:\\datasets\\bea1.jpg', target_size = (128, 128))
+test_image = image.load_img('', target_size = (128, 128))
 test_image = image.img_to_array(test_image)
 test_image = np.expand_dims(test_image, axis = 0)
 result = classifier.predict(test_image)
-print(classifier.predict_proba(test_image))
 print(result)
