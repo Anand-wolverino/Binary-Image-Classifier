@@ -6,5 +6,9 @@ A Simple binary image classifier that is built using Keras's sequential models. 
 
 ## Experiment 
 
-The training dataset consists of 700 images of mountains and coasts images. The training aaccuracy of the model is just shy of 92%.
+The training dataset consists of 700 images of mountains and coasts images. The training accuracy of the model is just shy of 92%.
 
+The model predicts the classes of the following images properly.
+
+![Screenshot1](beach.jpg)
+![Screenshot2](mountain.jpg)
